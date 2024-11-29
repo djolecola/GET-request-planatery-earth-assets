@@ -7,8 +7,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps: 
-      - name: checkout repo
+      - name: Checkout repository
         uses: actions/checkout@v4
+
+      - name: Verify repository content
+        run: ls -la # Provera da li je package.json prisutan
 
       - name: Use Node.js
         uses: actions/setup-node@v4
